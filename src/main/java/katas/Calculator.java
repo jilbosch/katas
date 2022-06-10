@@ -1,5 +1,8 @@
 package katas;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Calculator {
 
     private double total = 0.0;
@@ -49,16 +52,22 @@ public class Calculator {
 
     }
 
-    public double sumArray (String [] args){
-        int arr[]  = new int []{12,34,45,21,33,4};
-        int sum =0;
-
-        for (int i = 0; i < arr.length; i++) {
-            sum+=arr[i];
+    public void sumArray(double[] arr) {
+        double result = 0.0;
+        for (double num : arr) {
+            result += num;
         }
-
-            return total;
-
-        }
-
+        this.total = result;
     }
+
+    public List<Integer> returnEqOrGreatThan5(List<Integer> list) {
+        List<Integer> resList = new ArrayList<>();
+
+        for (int num : list) {
+            if (num >= 5.0) {
+                resList.add(num);
+            }
+        }
+        return resList;
+    }
+}
