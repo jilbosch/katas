@@ -28,9 +28,13 @@ public class FizzBuzz {
         }
     }
 
-    public Array arrayDivNum(int num, Array array){
-        List newArray = new ArrayList<>();
-        for (int item: array)
-
+    public List<Integer> arrayDivNum(int num,int [] numList){
+        List <Integer>divList=new ArrayList<>();
+        for (int i: numList ){
+            if (i%num==0 ){
+                divList.add(i);
+            }
+        }
+        return divList;
     }
 }
